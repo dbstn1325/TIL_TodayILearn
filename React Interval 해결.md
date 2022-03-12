@@ -108,7 +108,7 @@ function Main() {
 	
 ```
 
-tsx에 맞게 변형
+
 
 ```jsx
 
