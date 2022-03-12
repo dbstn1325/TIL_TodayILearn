@@ -59,7 +59,7 @@ ReactDOM.render(<Counter />, rootElement);
 
 ### setState에 callback() 전달 : useInterval 사용
 
-때문에 위와 같은 문제점을 해결하기 위한 자료를 찾던 중에, 또 이에 맞는 custom Hook이 해외에서 이미 코드화 되어 있다는 점을 알 수 있었다. 이 덕분에 손쉽게 아래의 ts 코드를 tsx로 변형함으로써 문제를 해결할 수 있었다.
+때문에 위와 같은 문제점을 해결하기 위한 자료를 찾던 중에, 또 이에 맞는 custom Hook이 해외에서 이미 코드화 되어 있다는 점을 알 수 있었다. 해당 코드의 원리를 기반으로 하여, 차근차근 이해해나가며 변형시킴으로써 해당 문제를 해결하였다.
 
 ```jsx
 import { useState, useEffect, useRef } from 'react';
