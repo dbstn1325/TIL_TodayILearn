@@ -10,7 +10,8 @@ React 내에서 ‘현재 시간’, ‘오늘의 남은 시간’ 을 화면에
 
 하지만! 이렇게 작성하여도 setInterval은 완벽히 동작하지 않는다. 
 
-![img1.daumcdn.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/022d5b2b-7d6b-4dc2-a4f8-8cea4d9fd01d/img1.daumcdn.png)
+![aaa](https://user-images.githubusercontent.com/78465062/158026777-b518b4a4-2ec8-409b-b979-4a3a698fca86.png)
+
 
 그 이유는, setInterval은 우리가 원하는 delay시간을 100% 보장 못하기 때문이다. setInterval은 함수를 실행하는 시간조차 delay에 포함시키기 때문에, 만약 함수를 실행하는 시간이 (currentTime, 1000 즉 1초) 보다 길다면, 이 실행시키는 1초를 기다리지 않고 다음 함수를 바로 실행해버린다는 것이다.
 
@@ -58,7 +59,7 @@ ReactDOM.render(<Counter />, rootElement);
 
 ### setState에 callback() 전달 : useInterval 사용
 
-위와 같은 문제점을 해결하기 위해, Dan이라는 분께서 만든 custom Hook 을 알 수 있었다.
+위와 같은 문제점을 해결하기 위한 자료를 찾던 중, 이에 맞는 custom Hook이 이미 코드화 되어 있었다. 이 ts 코드를 기반으로, tsx로 변형하여 해당 문제를 해결하였다.
 
 ```jsx
 import { useState, useEffect, useRef } from 'react';
