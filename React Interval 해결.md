@@ -105,7 +105,7 @@ function Main() {
        restTimer();
     }, 1000);
     ...
-	
+}	
 ```
 
 
@@ -133,6 +133,6 @@ function useInterval(callback: Function, delay?: number | null) {
 }
 ```
 
-참고 사이트: [https://mingule.tistory.com/65](https://mingule.tistory.com/65)
+참고 사이트: [https://overreacted.io/making-setinterval-declarative-with-react-hooks/](https://overreacted.io/making-setinterval-declarative-with-react-hooks/)
 
 [https://ko.javascript.info/settimeout-setinterval](https://ko.javascript.info/settimeout-setinterval)
