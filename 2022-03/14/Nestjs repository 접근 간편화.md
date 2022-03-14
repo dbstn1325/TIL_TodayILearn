@@ -43,7 +43,7 @@ async getUserAllFriends(userId: number): Promise<any> {
 ```jsx
 //friend.repository.ts
 async getFriendByUser(userId: number) {
-				//유저의 친구목록 접근
+	//해당 유저 userId의 친구목록 접근
         const result = await this
             .createQueryBuilder('friend')
             .innerJoin('friend.user', 'user')
@@ -57,6 +57,7 @@ async getFriendByUser(userId: number) {
 ```jsx
 //friend.repository.ts
 async checkUserFriendReq(email: string) {
+	//해당 유저 email의 친구요청목록  
         const gmail = email + "@gmail.com";
         const result = await this
             .createQueryBuilder('received_req')
