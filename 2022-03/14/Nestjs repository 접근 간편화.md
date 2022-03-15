@@ -20,14 +20,14 @@
 async getUserAllFriends(userId: number): Promise<any> {
     //유저 정보 검수과정 더 필요
     
-		//유저의 정보 가져오기
+    //유저의 정보 가져오기
     const user = await this.findOne({userId,});
     if (!user) {
-      throw new NotFoundException('존재하지 않는 유저입니다.');
+       throw new NotFoundException('존재하지 않는 유저입니다.');
     }
 		
-		//유저의 친구목록 접근
-		let friends = [];
+    //유저의 친구목록 접근
+    let friends = [];
     friend_list.forEach((user) => {
       //친구 한명당
       friends.push(user.friends);
@@ -43,20 +43,21 @@ async getUserAllFriends(userId: number): Promise<any> {
 ```jsx
 //friend.repository.ts
 async getFriendByUser(userId: number) {
-				//유저의 친구목록 접근
+	//해당 유저 userId의 친구 목록 접근
         const result = await this
             .createQueryBuilder('friend')
             .innerJoin('friend.user', 'user')
             .where('user.user_id = :userId', { userId })
             .getMany();
-        console.log(result);
+        //console.log(result);
         return result;
-    }
+}
 ```
 
 ```jsx
 //friend.repository.ts
 async checkUserFriendReq(email: string) {
+	//해당 유저 email의 친구요청 목록 접근
         const gmail = email + "@gmail.com";
         const result = await this
             .createQueryBuilder('received_req')
@@ -64,8 +65,7 @@ async checkUserFriendReq(email: string) {
             .where('user.email = :email', { email: gmail })
             .getMany();
         return result;
-
-    }
+}
 ```
 
 
