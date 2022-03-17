@@ -6,7 +6,7 @@
 ![](https://images.velog.io/images/dbstn1325/post/662c0093-f3a2-4580-adac-bc4947c8dfa7/image.png)
 
 
-클라이언트쪽에서 body에 email을 담아서 보낸다. 이 때, ‘꼭 Body(email)로 email을 가져올 수 있을까??’  라는 의문이 생겼다. 아래는 이에 대한 3가지 구현 방법을 소개한다.
+클라이언트쪽에서 body에 email을 담아서 보낸다. 이 때, ‘꼭 Body('email')  email을 가져올 수 있을까??’  라는 의문이 생겼다. 아래는 이에 대한 3가지 구현 방법을 소개한다.
 
 
 
