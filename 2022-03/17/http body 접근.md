@@ -27,7 +27,7 @@ const handleFriendRequest = async () => {
 
 ### **서버**
 
-**방법 1. 아래와 같은 Object.entiries 메서드를 통해 body에서 이메일을 가져올 수도 있다!**
+**방법 1. 아래와 같은 Object.entiries 메서드를 통해 body에서 이메일을 가져올 수도 있다.**
 
 ```jsx
 @Post('/check/req')
