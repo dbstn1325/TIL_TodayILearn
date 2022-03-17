@@ -17,7 +17,7 @@ const handleFriendRequest = async () => {
     // setReqStatus("send");
     console.log("send");
 
-//		requsetTo: "dbstn6477@gmail.com"이 들어있음
+    //requsetTo: "dbstn6477@gmail.com"이 들어있음
     await axios
       .post("http://localhost:3001/mypage/check/req", {email: requestTo}, {})
       .then((e) => {
@@ -35,8 +35,8 @@ const handleFriendRequest = async () => {
 checkUserFriendReq(@Body() email: string): any{
 
    for (const [key, value] of Object.entries(email)){
-			console.log(`${key}: ${value}`);
-		}
+	console.log(`${key}: ${value}`);
+   }
 
 }
 ```
@@ -47,9 +47,9 @@ checkUserFriendReq(@Body() email: string): any{
 @Post('/check/req')
 
 checkUserFriendReq(@Body() email: string): any{
-		for (const value of Object.entries(email)){
-          email = value[1];
-      }
+   for (const value of Object.entries(email)){
+       email = value[1];
+   }
 }
 
 ```
