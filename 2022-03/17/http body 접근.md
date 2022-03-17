@@ -6,7 +6,7 @@
 ![](https://images.velog.io/images/dbstn1325/post/662c0093-f3a2-4580-adac-bc4947c8dfa7/image.png)
 
 
-클라이언트쪽에서 body에 email을 담아서 보낸다. 이 때, ‘꼭 Body('email')방법으로만 email을 가져올 수 있을까??’  라는 의문이 생겼다. 아래는 이에 대한 3가지 구현 방법을 소개한다.
+클라이언트쪽에서 body에 email을 담아서 보낸다. 이 때, 해당 데이터를 ‘꼭 Body('email')방법으로만 email을 가져올 수 있을까??’  라는 의문이 생겼다. 아래는 이에 대한 3가지 구현 방법을 소개한다.
 
 
 
@@ -28,7 +28,6 @@ const handleFriendRequest = async () => {
 ### **서버**
 
 **방법 1. 아래와 같은 Object.entiries 메서드를 통해 key, value형식으로 body에 접근하여, email을 가져올 수도 있다.**
-
 ```jsx
 @Post('/check/req')
 
@@ -56,7 +55,7 @@ checkUserFriendReq(@Body() email: string): any{
 
 **방법 2. email객체에서 email을 한번 더 불러옴으로써 Body()의 email에 접근 가능하다.** 
 
-- 하지만 이 방법은 ts에 맞지 않는 방법이므로 추천하지 않는 방법이다.
+- 하지만 이 방법은 ts자체에 맞지 않는 방법이므로 추천하지 않는 방법이다.
 
 ```jsx
 @Post('/check/req')
@@ -67,7 +66,7 @@ checkUserFriendReq(@Body() email: string): any{
 
 **방법 3. Body(’emai’)로 접근**
 
-- Body의 email이라는 key에 접근하는 방법이다. 가장 간단하고, 쉬운 방법이긴 하지만, 항상 익숙하고 쉬운 방법만을 고집하는 건 올바르지 않은 점을 기억하자.
+- Body의 email이라는 key에 접근하는 방법이다. 이 방법이 가장 간단하고, 쉬운 방법이긴 하지만, 항상 익숙하고 쉬운 방법만을 고집하는 건 올바르지 않은 점을 기억하자.
 
 ```jsx
 @Post('/check/req')
