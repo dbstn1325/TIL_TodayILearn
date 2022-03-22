@@ -43,10 +43,9 @@ const handleSearch = async () => {
 ### 클라이언트 쪽
 
 - 클라이언트에서 @Param()을 통해 “정윤수”라는 데이터(한글)을 담아, 서버쪽으로 보낼려고 한다. 하지만, 이 과정 중 인코딩 상황이 일어났다. 이는 대부분 Content-Type을 charset=utf-8로 수정하여 보내면 해결된다. 하지만, 클라이언트쪽의 Params 데이터를 확인해보니, 정상적으로 utf-8형태로 보내고 있었고, 이는 또 다른 문제라고 생각해 이에 대한 기록을 남긴다.
+![image](https://user-images.githubusercontent.com/78465062/159436857-c4aa4876-7a5f-4519-acf0-f52be7fe6a5f.png)
+![image](https://user-images.githubusercontent.com/78465062/159436867-d7314e18-7f91-4725-b307-ec367fa8ee8f.png)
 
-![](2022-03-22-17-05-23.png)
-
-![](2022-03-22-17-05-39.png)
 
 ### 서버 쪽
 
@@ -82,15 +81,15 @@ const handleSearch = async() => {
     }
 
 return ( 
-			<div>
-					<form>
-            <div className="optionBox_inner">
-              <input type="text" value={friendName} onChange={onChange} name="name"></input>
-              <FontAwesomeIcon onClick={handleSearch} type="submit" icon={faPropIcon} className="search" />
-            </div>
-          </form>
+	<div>
+		<form>
+			<div className="optionBox_inner">
+			<input type="text" value={friendName} onChange={onChange} name="name"></input>
+			<FontAwesomeIcon onClick={handleSearch} type="submit" icon={faPropIcon} className="search" />
 			</div>
-)
+		</form>
+	</div>
+	)
 
 }
 ```
