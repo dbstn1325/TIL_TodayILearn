@@ -7,6 +7,8 @@
     - err.message: 오류를 발생시킨 요청을 설정하는 중에 문제가 발생
     - err.config.validateStatus: 사용자 정의 HTTP상태 코드 오류 범위 정의 가능
 
+
+**실제 썼던 예시**
 ```jsx
 const handleSearch = async () => {
     console.log(searchName);
@@ -22,8 +24,6 @@ const handleSearch = async () => {
       });
   };
 ```
-
-**실제 썼던 예시**
 
 1. **err.response.data**
 
