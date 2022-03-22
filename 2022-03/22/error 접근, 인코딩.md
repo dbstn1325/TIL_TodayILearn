@@ -1,4 +1,4 @@
-# error 처리
+# error 
 
 - .catch() 부문에서 err에 대한 데이터에 접근하기 위한 코드
     - [err.data](http://err.data): 에러의 데이터 확인
