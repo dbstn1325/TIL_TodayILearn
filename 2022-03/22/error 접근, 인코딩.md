@@ -1,7 +1,7 @@
 # error 접근
 
 - .catch() 부문에서 err에 대한 데이터에 접근하기 위한 코드
-    - [err.data](http://err.data): 에러의 데이터 확인
+    - err.data: 에러의 데이터 확인
     - err.response : 요청이 성공적이며, 서버가 2xx의 범위를 벗어나는 상태 코드로 응답
     - err.request: 요청이 이루어 졌으나 응답을 받지 못함, 브라우저의 XMLHttpRequest 인스턴스 또는 Node.js의 http.ClientRequest 인스턴스
     - err.message: 오류를 발생시킨 요청을 설정하는 중에 문제가 발생
