@@ -27,8 +27,12 @@ const handleSearch = async () => {
 
 1. **err.response.data**
 
+
 ![](https://images.velog.io/images/dbstn1325/post/2524e689-134e-431d-a6b1-6dce37ea6786/image.png)
+
 2. **err.response.status**
+
+
 ![](https://images.velog.io/images/dbstn1325/post/a701df06-db9f-4ca6-9a47-4db5a7b36f7d/image.png)
 
 
